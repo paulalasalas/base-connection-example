@@ -55,7 +55,7 @@ public class Libro {
         this.autor = autor;
     }
 
-    public List<Libro> getLibros(String result) {
+    public static List<Libro> getLibros(String result) {
         List<Libro> lista = new ArrayList<>();
 
         try {

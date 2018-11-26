@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             protected String doInBackground(Void... voids) {
-                String resultado = new HttpServerConnection().connectToServer("http://www.mocky.io/v2/56990dc51200009e47e25b44", 15000);
+                String resultado = new HttpServerConnection().connectToServer("http://www.mocky.io/v2/5bfc6aa9310000780039be36", 15000);
                 return resultado;
             }
 
             @Override
             protected void onPostExecute(String result) {
                 if(result != null) {
-                    mAdapter = new UIAdapter(new Libro().getLibros(result));
+                    mAdapter = new UIAdapter(Libro.getLibros(result));
                     mRecyclerView.setAdapter(mAdapter);
                 }
             }
