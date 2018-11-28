@@ -2,7 +2,7 @@ package cl.telematica.basicconnectionexample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+//hola
 public class MainActivity extends AppCompatActivity {
 
     @Override
