@@ -1,4 +1,4 @@
-package cl.telematica.basicconnectionexample;
+package cl.telematica.basicconnectionexample.main;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import cl.telematica.basicconnectionexample.R;
 import cl.telematica.basicconnectionexample.models.Libro;
 
 public class UIAdapter extends RecyclerView.Adapter<UIAdapter.ViewHolder> {
