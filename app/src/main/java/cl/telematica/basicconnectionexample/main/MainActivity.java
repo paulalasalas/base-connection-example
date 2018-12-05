@@ -8,9 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import java.util.List;
 
 import cl.telematica.basicconnectionexample.R;
-import cl.telematica.basicconnectionexample.main.presenter.MainPresenterImpl;
+import cl.telematica.basicconnectionexample.connection.MyApiAdapter;
 import cl.telematica.basicconnectionexample.models.Libro;
 import cl.telematica.basicconnectionexample.main.view.MainView;
+import retrofit2.Call;
+
 
 public class MainActivity extends AppCompatActivity implements MainView {
 
@@ -27,8 +29,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
         setRecyclerViewParams();
 
-        MainPresenterImpl presenter = new MainPresenterImpl(this);
-        presenter.fetchData("http://www.mocky.io/v2/5bfc6aa9310000780039be36", 15000);
+        Call<List<Libro>> call = MyApiAdapter.getApiService().getLibros();
     }
 
     @Override
